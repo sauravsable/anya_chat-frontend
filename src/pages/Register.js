@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import '../styles/Register.css';
 
+const API_URL = 'https://anya-chat-backend.onrender.com';
+
+
 const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -25,7 +28,7 @@ const Register = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:1337/api/auth/local/register",
+        `${API_URL}/api/auth/local/register`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

@@ -26,7 +26,7 @@ const App = () => {
             token ? <Chat token={token} onLogout={onLogout} /> : <Navigate to="/login" />
           }
         />
-        <Route path="*" element={<Navigate to={token ? "/chat" : "/signup"} />} />
+        <Route path="*" element={<Navigate to={token ? "/chat" : "/register"} />} />
       </Routes>
     </Router>
   );
