@@ -1,0 +1,120 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 90vw;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.header {
+    background-color: #075e54;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+.logout-btn {
+    background-color: #ff5c8d;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.socket-info {
+    padding: 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+.messages-container {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-message {
+    align-self: flex-end;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.server-message {
+    align-self: flex-start;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.message-content {
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+    font-size: 14px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.user .message-content {
+    background-color: #25d366;
+    color: white;
+}
+
+.server .message-content {
+    background-color: #eeeeee;
+    color: black;
+}
+
+.message-text {
+    word-wrap: break-word;
+}
+
+.input-container {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+}
+
+.input-container input {
+    width: 85%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-container button {
+    background-color: #075e54;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.input-container button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
